@@ -7,6 +7,8 @@ public class CursorPosition : MonoBehaviour
     [SerializeField] private Transform cursor;
     [SerializeField] private new Camera camera;
 
+    public static GameObject triggerObject;
+
     private void Update()
     {
         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
@@ -22,5 +24,15 @@ public class CursorPosition : MonoBehaviour
         //Cursor.visible= false;
 
 
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        triggerObject = collision.gameObject;
+
+        if (collision.name == "GroundCheck") triggerObject = collision.GetComponentInParent<Rigidbody2D>().gameObject;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        triggerObject = null;
     }
 }

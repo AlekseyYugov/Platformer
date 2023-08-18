@@ -1,0 +1,372 @@
+fileFormatVersion: 2
+guid: e18945080f569ab4fb773f809f1c6c16
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_0
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 820
+        width: 310
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e8d0d230c366b4ebf2c5266e9f371e
+      internalID: 110288717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_3
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 820
+        width: 310
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c0c2912a5b5d148b3a92a95e5ff77d
+      internalID: -1221029275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_7
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 820
+        width: 310
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0dee474891f0f44ac4555a22655fee
+      internalID: 1049843531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_12
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 570
+        width: 310
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29915e714d99904498014ad55ad65db4
+      internalID: 1128634694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 570
+        width: 310
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81d5b2e3b2c42044b78ad5cc2c92488
+      internalID: 892824903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_15
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 570
+        width: 310
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418fa61ed5fe11d4db39a468d14b5831
+      internalID: -1752805819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_23
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 320
+        width: 310
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b45bd9af569dfc4a8aad6dc1653658c
+      internalID: 274882394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_24
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 320
+        width: 310
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e69bc1b0f4193409eaeacfccc6524b
+      internalID: 370482452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_25
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 320
+        width: 310
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fa9db5bb1fa7145a4fe5c063a3fd2f
+      internalID: 1548413475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_16: 1188144560
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_29: -622095554
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_35: 195219434
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_25: 1548413475
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_7: 1049843531
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_27: -272590760
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_17: 1462059683
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_9: 598592837
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_20: 2126262915
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_22: 565627162
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_3: -1221029275
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_14: 892824903
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_19: 181348530
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_11: -219868078
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_30: 1959384138
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_2: -2105075927
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_13: 175712856
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_21: 1734981468
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_4: 1937137453
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_10: 125283816
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_12: 1128634694
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_24: 370482452
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_5: -1137092550
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_28: 166073252
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_6: -1030923873
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_18: -993253093
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_15: -1752805819
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_32: 989936059
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_31: 673522030
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_26: 433066563
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_0: 110288717
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_33: 69490719
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_23: 274882394
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_1: 1229468152
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_8: -44536466
+      stock-vector-water-fireball-animation-sprite-sheet-for-cartoon-or-game-475415794-transformed-transformed_34: -1560129732
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

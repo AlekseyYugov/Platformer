@@ -2,55 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterAnimation : CharacterMove
+public class CharacterAnimation : PlayerController
 {
     public Animator anim;
-    private bool faceRight = true;
+    public PlayerController player;
     private void Start()
     {
         anim = GetComponent<Animator>();
     }
 
-    protected override void MoveChar()
+    private void MoveChar()
     {
-        anim.SetBool("Jump", false);
-        anim.SetBool("RunRight", false);
-        anim.SetBool("RunLeft", false);
-        anim.SetBool("JumpBack", false);
-        if (faceRight)
-        {
-            anim.SetBool("IdleBack", false);
-        }
-        else 
-        { 
-            anim.SetBool("Idle", false); 
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && faceRight)
+        if (!player.onGround)
         {
             anim.SetBool("Jump", true);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && !faceRight)
+        else
         {
-            anim.SetBool("JumpBack", true);
+            anim.SetBool("Jump", false);
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-            faceRight = true;
-            anim.SetBool("RunRight", true);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            faceRight= false;
-            anim.SetBool("RunLeft", true);
+            if(Input.GetKey(KeyCode.A)) faceRight = false;
+            if(Input.GetKey(KeyCode.D)) faceRight = true;
+            anim.SetBool("Run", true);
 
         }
+        else
+        {
+            anim.SetBool("Run", false);
+        }
 
+    }
 
-
+    public void AnimAttack()
+    {//TODO
+        
+        if (Input.GetMouseButton(0))
+        {
+            anim.SetBool("Attack", true);
+        }
     }
     private void Update()
     {
         MoveChar();
+        if (Input.GetMouseButton(0) == false)
+        {
+            anim.SetBool("Attack", false);
+        }
     }
 
     
