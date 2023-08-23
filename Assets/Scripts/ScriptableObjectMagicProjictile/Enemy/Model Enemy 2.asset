@@ -17,7 +17,7 @@ MonoBehaviour:
   m_DistanceToMove: 1
   m_DistanceToThePlayer: 5
   m_MaxSpeed: 2
-  m_MaxHealthPoint: 100
-  m_Damage: 10
+  m_MaxHealthPoint: 50
+  m_Damage: 5
   m_ShotPeriod: 0.5
   m_Animator: {fileID: 9100000, guid: fb9fe734c424ef3468eef3e406d158ac, type: 2}

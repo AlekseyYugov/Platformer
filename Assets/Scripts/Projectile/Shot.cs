@@ -20,7 +20,8 @@ public class Shot : MonoBehaviour
     public float m_Timer = 3f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Player>() || collision.gameObject.GetComponent<CursorPosition>()) return;
+        if (collision.gameObject.GetComponent<Player>() || collision.gameObject.GetComponent<CursorPosition>() 
+            || collision.gameObject.GetComponentInParent<Player>() || collision.gameObject.GetComponent<Trigger>()) return;
         if (m_IsBomb == false) Delete(0);
 
         //if (m_Character.name == collision.name || gameObject.name == collision.name) return;

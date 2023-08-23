@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e222d7cecd813f4c872cfb5a9177533, type: 3}
+  m_Name: Model Enemy 6
+  m_EditorClassIdentifier: 
+  m_EnemyMoves: 1
+  m_Speed: 3
+  m_DistanceToMove: 1
+  m_DistanceToThePlayer: 10
+  m_MaxSpeed: 3
+  m_MaxHealthPoint: 150
+  m_Damage: 20
+  m_ShotPeriod: 0.5
+  m_Animator: {fileID: 9100000, guid: a25ffb5c14f3f8f4599ee8fb253f30a8, type: 2}

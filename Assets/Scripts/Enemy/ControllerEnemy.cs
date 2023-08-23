@@ -1,13 +1,24 @@
+using System.Collections;
 using UnityEngine;
 
 public class ControllerEnemy : ViewEnemy
 {
+    [SerializeField] private Animator m_Animator;
+    [SerializeField] private GameObject m_NextLevel;
+    [SerializeField] private GameObject m_Progressbar;
     private Shot shot;
     private float CurrentTimer;
     private float newSpeed;
 
     private bool fire = false;
     private bool ice = false;
+
+    public bool onGround;
+    private float checkRadius = 0.5f;
+    public LayerMask Ground; 
+    public Transform groundCheck;
+
+
 
     private void FixedUpdate()
     {
@@ -28,17 +39,35 @@ public class ControllerEnemy : ViewEnemy
             fire = false;
             Freezing();
         }
+        CheckingGround();
+        if (jump) 
+        {
+            //gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10000f, ForceMode2D.Impulse);
+            StartCoroutine(Jump());
+            jump= false;
+            
+        }
+        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.GetComponent<Shot>()) return;
+        movesEnemy = MovesEnemy.SearchObject;
 
         shot = collision.gameObject.GetComponent<Shot>();
 
         m_CurrentHealthPoint -= shot.m_Damage;
 
-        if (m_CurrentHealthPoint <= 0) Destroy(gameObject);
+        if (m_CurrentHealthPoint <= 0)
+        {
+            if (modelEnemy.m_BigBoss == true)
+            {
+                m_NextLevel.SetActive(true);
+            }            
+            Destroy(gameObject);
+        }
 
         CurrentTimer = shot.m_Timer;
 
@@ -58,6 +87,7 @@ public class ControllerEnemy : ViewEnemy
             ice = true;
             fire = false;
         }
+        
     }
 
     protected override void MoveInPlane()
@@ -76,18 +106,20 @@ public class ControllerEnemy : ViewEnemy
 
     protected override void PatrolPointMove()
     {
-        if (Vector3.Distance(transform.position, Player.Instance.transform.position) <= modelEnemy.m_Speed) movesEnemy = MovesEnemy.SearchObject;
+        if (Vector3.Distance(transform.position, Player.Instance.transform.position) <= modelEnemy.m_DistanceToThePlayer) movesEnemy = MovesEnemy.SearchObject;
         else
         {
             if (transform.position.x > Points[index].position.x)
             {
-                transform.Translate(Vector2.right * speed * Time.deltaTime);
-                transform.eulerAngles = new Vector3(0, -180, 0);
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+                m_Animator.SetBool("Right", false);
+                m_Progressbar.transform.localScale = new Vector3(1,1,1);
             }
             if (transform.position.x < Points[index].position.x)
             {
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
-                transform.eulerAngles = new Vector3(0, 0, 0);
+                m_Animator.SetBool("Right", true);
+                m_Progressbar.transform.localScale = new Vector3(-1, 1, 1);
             }
             if (Vector2.Distance(transform.position, Points[index].position) <= 1f)
             {
@@ -98,22 +130,56 @@ public class ControllerEnemy : ViewEnemy
                 index = 0;
             }
         }
-        
+
     }
 
+    private bool jump = false;
     protected override void SearchObject()
     {
-        if (Vector3.Distance(transform.position, Player.Instance.transform.position) >= modelEnemy.m_DistanceToThePlayer) movesEnemy = MovesEnemy.DefaultMoves;
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, modelEnemy.m_DistanceToMove);
+        if(groundInfo.collider != null)
+        {
+            if (groundInfo.collider.tag == "Raise")
+            {
+                if(onGround)
+                {                    
+                    jump = true;
+                }
+            }
+        }
+        
+        
+        
         if (transform.position.x > Player.Instance.transform.position.x)
         {
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-            transform.eulerAngles = new Vector3(0, -180, 0);
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
+            m_Animator.SetBool("Right", false);
+            m_Progressbar.transform.localScale = new Vector3(1, 1, 1);
         }
         else
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            m_Animator.SetBool("Right", true);
+            m_Progressbar.transform.localScale = new Vector3(-1, 1, 1);
         }
+    }
+    IEnumerator Jump()
+    {
+        var rb = gameObject.GetComponent<Rigidbody2D>();
+        var pos = rb.position;
+        while (true)
+        {
+            rb.AddForce(Vector2.up * 10f, ForceMode2D.Impulse);
+            if(rb.position.y > pos.y +1f)
+            {
+                yield break;
+                
+
+            }
+            yield return null;
+
+        }
+
     }
     private bool IsRight()
     {
@@ -130,7 +196,10 @@ public class ControllerEnemy : ViewEnemy
             return moveRight;
         }
     }
-
+    private void CheckingGround()
+    {
+        onGround = Physics2D.OverlapCircle(groundCheck.position, checkRadius, Ground);
+    }
     protected override void FireDamage()
     {
         gameObject.GetComponent<SpriteRenderer>().color = Color.white;

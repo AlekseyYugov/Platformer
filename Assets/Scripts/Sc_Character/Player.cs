@@ -17,6 +17,7 @@ public class Player : MonoSingleton<Player>
         set
         {
             m_CurrentHealthPoint = value;
+            if (m_CurrentHealthPoint > m_MaxHealthPoint) m_CurrentHealthPoint = m_MaxHealthPoint;
         }
     }
 
@@ -32,18 +33,10 @@ public class Player : MonoSingleton<Player>
         set
         {
             m_CurrentManaPoint = value;
+            if (m_CurrentManaPoint > m_MaxManaPoint) m_CurrentManaPoint = m_MaxManaPoint;
         }
     }
 
-
-    private void Update()
-    {
-        //if (CurrentHealthPoint > MaxHealthPoint) CurrentHealthPoint = MaxHealthPoint;
-        //if (CurrentManaPoint > MaxManaPoint) CurrentManaPoint = MaxManaPoint;
-    }
-
-
-    public bool m_IsTeleporting = false;
 
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -70,18 +63,6 @@ public class Player : MonoSingleton<Player>
             {
                 m_CurrentHealthPoint -= collision.gameObject.GetComponent<Shot>().m_Damage;
             }
-        }
-        if (collision.gameObject.GetComponent<Teleport>())
-        {
-            m_IsTeleporting = true;
-        }
-
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.GetComponent<Teleport>())
-        {
-            m_IsTeleporting = false;
         }
     }
     private void OnDestroy()

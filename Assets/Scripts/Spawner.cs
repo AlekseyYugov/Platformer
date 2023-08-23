@@ -6,14 +6,14 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject m_PrefabBomb;
 
-    private Bomb bomb;
+    private GameObject bomb;
 
     private void Update()
     {
-        bomb = GameObject.FindObjectOfType<Bomb>();
-        if (bomb == null)
+        //bomb = GameObject.FindObjectOfType<Bomb>();
+        if (bomb == null || Vector2.Distance(gameObject.transform.position, bomb.transform.position) > 5f)
         {
-            Instantiate(m_PrefabBomb,transform.position, Quaternion.identity);
+            bomb = Instantiate(m_PrefabBomb,transform.position, Quaternion.identity);
         }
     }
 }

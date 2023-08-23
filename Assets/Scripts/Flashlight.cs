@@ -5,10 +5,20 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     [SerializeField] private GameObject m_Light;
+    [SerializeField] private bool m_Activate;
 
     private void Start()
     {
-        m_Light.SetActive(false);
+        if(m_Activate)
+        {
+            m_Light.SetActive(true);
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        else
+        {
+            m_Light.SetActive(false);
+        }
+        
     }
 
     private Shot shot;

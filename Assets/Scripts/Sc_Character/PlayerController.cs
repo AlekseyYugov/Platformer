@@ -21,19 +21,19 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        rb= GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         newSpeed = speed;
     }
     private void Update()
     {
-        
+
         Walk();
         Reflect();
         Jump();
         CheckingGround();
     }
 
-    
+
     public float speed = 2f;
     public float newSpeed;
     private Vector2 vector;
@@ -45,20 +45,20 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(moveVector.x * 0, rb.velocity.y);
         }
-        else { rb.velocity = new Vector2(moveVector.x * speed, rb.velocity.y);}
+        else { rb.velocity = new Vector2(moveVector.x * speed, rb.velocity.y); }
     }
     private void Reflect()
     {
-        if ((moveVector.x>0&&!faceRight) || (moveVector.x<0&&faceRight))
+        if ((moveVector.x > 0 && !faceRight) || (moveVector.x < 0 && faceRight))
         {
-            transform.localScale = Vector3.Scale(transform.localScale, new Vector3(-1, 1,1));
+            transform.localScale = Vector3.Scale(transform.localScale, new Vector3(-1, 1, 1));
             faceRight = !faceRight;
         }
     }
     private int jumpCount = 0;
     private int maxJumpValue = 2;
 
-    
+
     private float doubleJumpVelocity = 10f;
     private void Jump()
     {
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         }
         if (jumpControl)
         {
-            
+
             if (onGround) { jumpCount = 0; }
             if (Input.GetKeyDown(KeyCode.Space) && onGround)
             {

@@ -36,7 +36,7 @@ public abstract class ViewEnemy : MonoBehaviour
         movesEnemy = m_Enemy.m_EnemyMoves;
         m_CurrentHealthPoint = m_Enemy.m_MaxHealthPoint;
         speed = m_Enemy.m_Speed;
-        gameObject.GetComponent<Animator>().runtimeAnimatorController = m_Enemy.m_Animator;
+        //gameObject.GetComponent<Animator>().runtimeAnimatorController = m_Enemy.m_Animator;
     }
     private void Update()
     {
@@ -60,7 +60,6 @@ public abstract class ViewEnemy : MonoBehaviour
             m_Timer = 0;
             return;
         }
-
         m_Timer -= Time.deltaTime;
     }
 

@@ -6,17 +6,27 @@ using UnityEngine.UI;
 public class ProgressBarSkills : MonoBehaviour
 {
     [SerializeField] private Image image;
-
-    private float value = Turret.m_Timer;
     [SerializeField] private MagicProjectile projectile;
+    private Turret turret;
+    public float value;
+
+    private void Start()
+    {
+        turret = FindAnyObjectByType<Turret>();
+        value = turret.m_Timer;
+    }
+
+    
+    
 
     private void Update()
     {
-        value = Turret.m_Timer;
-        if (image != null) 
-        {
-            image.fillAmount = value / projectile.m_ShotPeriod;
+        if (turret.projectile[turret.index] == projectile)
+        {       
+            if(turret.m_Timer == 0)value= 0;
         }
+        image.fillAmount = value / projectile.m_ShotPeriod;
+        value += Time.deltaTime;
     }
 
 

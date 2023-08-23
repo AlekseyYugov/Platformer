@@ -1,21 +1,19 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
     [SerializeField] private Transform cursor;
-
-    [SerializeField] private MagicProjectile[] projectile;
-
     [SerializeField] private CharacterAnimation anim;
-
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private GameObject m_Indicator;
 
-    private int index = 0;
-    public static float m_Timer;
-
+    public MagicProjectile[] projectile; 
+    public int index = 0;
+    public float m_Timer;
     public static Quaternion rotation;
+    public List<ProgressBarSkills> progressBar;
+
 
     private void Update()
     {
@@ -27,16 +25,21 @@ public class Turret : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             index = 0;
+            m_Timer = progressBar[index].value;
+            
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             index = 1;
+            m_Timer = progressBar[index].value;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             index = 2;
+            m_Timer = progressBar[index].value;
         }
 
+        m_Indicator.transform.position = progressBar[index].transform.position;
 
         if (Input.GetMouseButton(0))
         {

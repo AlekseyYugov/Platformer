@@ -15,5 +15,5 @@ MonoBehaviour:
   m_MagicGunPrefab: {fileID: 8299386922707669057, guid: 388e4d554eb678949983249cef97efba, type: 3}
   typeProjectile: 1
   m_SpeedProjictile: 8
-  m_ShotPeriod: 0.5
+  m_ShotPeriod: 2
   m_TakeMana: 20

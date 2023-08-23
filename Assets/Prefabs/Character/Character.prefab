@@ -286,8 +286,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 84eada9b74cd3ae46983e084ee65032c, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -384,9 +384,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3f8fd824ca3fc4095a5469cb7a981b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHeight: 1
+  MaxHeight: 1.5
   speed: 5
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 7159843009746116420}
+  m_Timer: 5
+  m_Image: {fileID: 0}
   cursor: {fileID: 0}
 --- !u!1 &6588379912320565950
 GameObject:
@@ -494,7 +496,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1.3875139
+  m_Mass: 1.5564034
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -516,8 +518,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.041817427, y: 0}
-  m_Size: {x: 0.89, y: 1.75}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.12, y: 1.63}
   m_Direction: 0
 --- !u!95 &1938219615
 Animator:
@@ -548,9 +550,9 @@ AudioSource:
   m_GameObject: {fileID: 6588379912320565950}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  OutputAudioMixerGroup: {fileID: 3389790710149685496, guid: e513d73f73bb8ed42aefec3927273d3e, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 57130ec923ca8e740b876345fa177847, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -657,7 +659,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 66816
   isOnGround: 1
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 3879756495108740582}
   speed: 4
   newSpeed: 0
 --- !u!114 &1074956464
@@ -677,7 +679,6 @@ MonoBehaviour:
   m_CurrentHealthPoint: 100
   m_MaxManaPoint: 100
   m_CurrentManaPoint: 100
-  m_IsTeleporting: 0
 --- !u!114 &1938219616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,7 +731,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7124975459753068372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -0.95, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -752,4 +753,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.05
