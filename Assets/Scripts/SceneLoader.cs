@@ -28,6 +28,7 @@ public class SceneLoader : MonoBehaviour
     }
     public void LoadScene(string sceneName)
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(sceneName);
     }
     public void MainMenu()
@@ -40,14 +41,22 @@ public class SceneLoader : MonoBehaviour
     }
     public void Setting()
     {
-        m_Setting.SetActive(true);
-        m_MainMenu.SetActive(false);
+        if (m_MainMenu != null && m_Setting != null)
+        {
+            m_Setting.SetActive(true);
+            m_MainMenu.SetActive(false);
+        }
+            
         
     }
     public void Back()
     {
-        m_MainMenu.SetActive(true);
-        m_Setting.SetActive(false);
+        if (m_MainMenu != null && m_Setting != null)
+        {
+            m_MainMenu.SetActive(true);
+            m_Setting.SetActive(false);
+        }
+            
     }
     public void Quit()
     {

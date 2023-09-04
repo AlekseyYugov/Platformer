@@ -8,6 +8,7 @@ public class Player : MonoSingleton<Player>
     [SerializeField] private float m_MaxHealthPoint = 100;
     public float MaxHealthPoint => m_MaxHealthPoint;
     [SerializeField] private float m_CurrentHealthPoint = 100;
+    [SerializeField] private GameObject m_WindowYouLose;
     public float CurrentHealthPoint
     {
         get
@@ -52,7 +53,10 @@ public class Player : MonoSingleton<Player>
         }
         if (m_CurrentHealthPoint <= 0)
         {
-            OnDestroy();
+            m_CurrentHealthPoint = 0;
+            m_WindowYouLose.SetActive(true);
+            gameObject.SetActive(false);
+            Time.timeScale = 0;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

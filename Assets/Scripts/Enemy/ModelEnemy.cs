@@ -21,5 +21,6 @@ public class ModelEnemy : ScriptableObject
     public float m_MaxHealthPoint = 100f;
     public float m_Damage = 10;
     public float m_ShotPeriod = 0.5f;
+    public float m_PointsEnemy = 0f;
     public bool m_BigBoss;
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trigger : MonoBehaviour
+public class TriggerOpenGameObjects : MonoBehaviour
 {
     [SerializeField] List<GameObject> m_Object;
 

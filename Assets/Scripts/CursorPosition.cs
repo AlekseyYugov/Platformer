@@ -20,8 +20,8 @@ public class CursorPosition : MonoBehaviour
         Vector3 point = ray.GetPoint(distanse);
 
         cursor.position = point;
+        Cursor.visible = false;
 
-        //Cursor.visible= false;
 
 
     }

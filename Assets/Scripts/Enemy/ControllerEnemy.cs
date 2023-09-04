@@ -4,7 +4,7 @@ using UnityEngine;
 public class ControllerEnemy : ViewEnemy
 {
     [SerializeField] private Animator m_Animator;
-    [SerializeField] private GameObject m_NextLevel;
+    [SerializeField] private GameObject m_ResultPanel;
     [SerializeField] private GameObject m_Progressbar;
     private Shot shot;
     private float CurrentTimer;
@@ -18,8 +18,7 @@ public class ControllerEnemy : ViewEnemy
     public LayerMask Ground; 
     public Transform groundCheck;
 
-
-
+    
     private void FixedUpdate()
     {
         if (m_CurrentHealthPoint < modelEnemy.m_MaxHealthPoint)
@@ -64,8 +63,10 @@ public class ControllerEnemy : ViewEnemy
         {
             if (modelEnemy.m_BigBoss == true)
             {
-                m_NextLevel.SetActive(true);
-            }            
+                Time.timeScale = 0;
+                m_ResultPanel.SetActive(true);
+            }
+            PointsGame.m_Points += modelEnemy.m_PointsEnemy;
             Destroy(gameObject);
         }
 

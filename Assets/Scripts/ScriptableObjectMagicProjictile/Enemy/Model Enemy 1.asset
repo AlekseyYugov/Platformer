@@ -17,7 +17,8 @@ MonoBehaviour:
   m_DistanceToMove: 1
   m_DistanceToThePlayer: 5
   m_MaxSpeed: 2
-  m_MaxHealthPoint: 100
-  m_Damage: 10
+  m_MaxHealthPoint: 300
+  m_Damage: 20
   m_ShotPeriod: 0.5
+  m_PointsEnemy: 50
   m_BigBoss: 1

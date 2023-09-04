@@ -77,7 +77,6 @@ GameObject:
   - component: {fileID: 808201530}
   - component: {fileID: 19982573}
   - component: {fileID: 7655637990130417408}
-  - component: {fileID: 395409386}
   m_Layer: 0
   m_Name: Enemy_02
   m_TagString: Untagged
@@ -202,7 +201,7 @@ Animator:
   m_GameObject: {fileID: 241884588777746056}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb9fe734c424ef3468eef3e406d158ac, type: 2}
+  m_Controller: {fileID: 9100000, guid: dd8ba1d39462c6e4c86f793208b83fcf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -250,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7750787e48c449a4bbc107291a2dbecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Enemy: {fileID: 11400000, guid: 7d3a2612cdd789240a437ef8d1782dca, type: 2}
+  m_Enemy: {fileID: 11400000, guid: 862c5535a52555248892ea9d65e1070d, type: 2}
   groundDetection: {fileID: 241884587403623181}
   rb: {fileID: 241884588777746062}
   m_Points:
@@ -258,25 +257,13 @@ MonoBehaviour:
   - {fileID: 0}
   m_CurrentHealthPoint: 0
   m_Animator: {fileID: 808201530}
-  m_NextLevel: {fileID: 0}
+  m_ResultPanel: {fileID: 0}
   m_Progressbar: {fileID: 2397708619735431090}
   onGround: 0
   Ground:
     serializedVersion: 2
     m_Bits: 66816
   groundCheck: {fileID: 452711354}
---- !u!114 &395409386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241884588777746056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 236686fa245a5c542b598c905c6b267a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2397708619735431090
 GameObject:
   m_ObjectHideFlags: 0

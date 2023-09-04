@@ -237,12 +237,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 0}
+  anim: {fileID: 1938219616}
+  audioSource: {fileID: 335230277}
+  m_Indicator: {fileID: 0}
   projectile:
   - {fileID: 11400000, guid: b710c0413e2cec741902e780fae4faab, type: 2}
   - {fileID: 11400000, guid: 14ea1153c7c524b42ba95a23f47e5715, type: 2}
   - {fileID: 11400000, guid: aa2aa8cc95e434d418195739e549d2fa, type: 2}
-  anim: {fileID: 1938219616}
-  audioSource: {fileID: 335230277}
+  index: 0
+  m_Timer: 0
+  progressBar:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &4407126370009029026
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +292,7 @@ AudioSource:
   m_GameObject: {fileID: 4407126370009029026}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3389790710149685496, guid: e513d73f73bb8ed42aefec3927273d3e, type: 2}
   m_audioClip: {fileID: 8300000, guid: 84eada9b74cd3ae46983e084ee65032c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -677,6 +684,7 @@ MonoBehaviour:
   m_DoNotDestroyOnLoad: 0
   m_MaxHealthPoint: 100
   m_CurrentHealthPoint: 100
+  m_WindowYouLose: {fileID: 0}
   m_MaxManaPoint: 100
   m_CurrentManaPoint: 100
 --- !u!114 &1938219616

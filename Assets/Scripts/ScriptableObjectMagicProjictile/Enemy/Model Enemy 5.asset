@@ -20,3 +20,5 @@ MonoBehaviour:
   m_MaxHealthPoint: 150
   m_Damage: 20
   m_ShotPeriod: 0.5
+  m_PointsEnemy: 30
+  m_BigBoss: 0

@@ -20,4 +20,5 @@ MonoBehaviour:
   m_MaxHealthPoint: 150
   m_Damage: 20
   m_ShotPeriod: 0.5
-  m_Animator: {fileID: 9100000, guid: a25ffb5c14f3f8f4599ee8fb253f30a8, type: 2}
+  m_PointsEnemy: 35
+  m_BigBoss: 0
