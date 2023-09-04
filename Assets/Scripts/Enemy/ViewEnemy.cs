@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -19,12 +17,9 @@ public abstract class ViewEnemy : MonoBehaviour
 
     protected int index = 0;
 
-    //protected GameObject m_Player;
-
     public float m_CurrentHealthPoint;
     protected float speed;
     private float m_Timer;
-    //public float Timer => m_Timer;
     public float Timer
     {
         get { return m_Timer; }
@@ -36,7 +31,6 @@ public abstract class ViewEnemy : MonoBehaviour
         movesEnemy = m_Enemy.m_EnemyMoves;
         m_CurrentHealthPoint = m_Enemy.m_MaxHealthPoint;
         speed = m_Enemy.m_Speed;
-        //gameObject.GetComponent<Animator>().runtimeAnimatorController = m_Enemy.m_Animator;
     }
     private void Update()
     {

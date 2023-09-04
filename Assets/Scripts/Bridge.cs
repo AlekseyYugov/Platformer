@@ -1,9 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bridge : MonoBehaviour
@@ -13,12 +8,7 @@ public class Bridge : MonoBehaviour
     [SerializeField] private float m_MaxCorner;
     [SerializeField] private AudioSource audioSource;
     private float m_SumCorner;
-    
-
-
-
     private Coroutine coroutine;
-
     private Shot shot;
     private bool cameDown = false;
     

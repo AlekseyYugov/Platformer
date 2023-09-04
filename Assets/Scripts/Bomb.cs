@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour
@@ -7,32 +5,23 @@ public class Bomb : MonoBehaviour
     [SerializeField] private Animator m_Anim;
     [SerializeField] private GameObject m_Projectile;
     [SerializeField] private GameObject m_Light;
-
     private float timer = 0;
-
     private Shot shot;
-    private bool currentFire = false;
-
-
-    
+    private bool currentFire = false;    
 
     private void Start()
-    {
-        
+    {        
         m_Anim.enabled= false;
         m_Light.SetActive(false);
         gameObject.transform.localScale = new Vector3(1f, 1f, -1f);
     }
     private void Update()
-    {
-        
+    {        
         if (m_Anim.enabled == true)
         {
             timer += Time.deltaTime;
         }
-        Delete();
-
-        
+        Delete();        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -48,9 +37,7 @@ public class Bomb : MonoBehaviour
                 Delete();
             }
         }
-    }
-
-    
+    }    
     private void Delete()
     {
 

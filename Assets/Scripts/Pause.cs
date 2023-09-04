@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
     [SerializeField] private GameObject m_MenuPause;
-
     private void Start()
     {
         m_MenuPause.SetActive(false);
     }
-
     public void ButtonPause()
     {
         if(m_MenuPause.activeSelf == false)

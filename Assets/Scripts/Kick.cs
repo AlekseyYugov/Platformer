@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,15 +8,11 @@ public class Kick : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private float m_Timer = 5f;
     [SerializeField] private Image m_Image;
-    public GameObject cursor;
-    
+    public GameObject cursor;    
     private Vector2 startPosition;
     private Vector2 endPosition;
-
     private bool kick = false;
-
     private float m_Time;
-
     private RaiseObject raiseObject;
 
     private void Start()
@@ -50,14 +42,6 @@ public class Kick : MonoBehaviour
                         audioSource.Play();
                         kick= true;
                     }
-                    //if (raiseObject.onGround)
-                    //{
-                    //    startPosition = raiseObject.transform.position;
-                    //    endPosition = new Vector2(startPosition.x, startPosition.y + MaxHeight);
-                    //    jump = true;
-                    //    audioSource.Play();
-                    //}
-
                 }
             }
         }
@@ -67,16 +51,6 @@ public class Kick : MonoBehaviour
             else { Raise(); }
             
         }
-        //if (raiseObject != null && m_Time <= 0)
-        //{
-            
-        //}
-
-        //if (raiseObject != null)
-        //{
-        //    if (raiseObject.transform.position.y >= endPosition.y) { jump = false; }
-        //}
-
     }
 
     private void Raise()

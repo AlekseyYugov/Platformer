@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TakeManey : MonoBehaviour
@@ -14,7 +12,6 @@ public class TakeManey : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().enabled= false;
             gameObject.GetComponent<Animator>().enabled= false;
             gameObject.GetComponent<BoxCollider2D>().enabled= false;
-
 
             Destroy(gameObject, 0.2f);
         }

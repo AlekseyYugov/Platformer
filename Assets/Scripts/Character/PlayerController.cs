@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private AudioSource audioSource;
     public Rigidbody2D rb;
     public Vector2 moveVector;
     protected bool faceRight = true;
@@ -16,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask Ground;
     public bool isOnGround = true;
 
-    [SerializeField] private AudioSource audioSource;
+    
 
 
     private void Start()
@@ -57,8 +56,6 @@ public class PlayerController : MonoBehaviour
     }
     private int jumpCount = 0;
     private int maxJumpValue = 2;
-
-
     private float doubleJumpVelocity = 10f;
     private void Jump()
     {

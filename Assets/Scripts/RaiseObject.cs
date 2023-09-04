@@ -1,21 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class RaiseObject : MonoBehaviour
 {
+    [SerializeField] private float Mass;
+    [SerializeField] private float Drag;
     public LayerMask Ground;
     public bool onGround;
     public bool onAbove;
     public Transform groundCheck;
     public Transform aboveCheck;
     public float checkRadius = 0.5f;
-
-    [SerializeField] private float Mass;
-    [SerializeField] private float Drag;
-
 
     private void Start()
     {

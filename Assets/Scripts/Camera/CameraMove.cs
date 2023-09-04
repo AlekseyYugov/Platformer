@@ -1,20 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D player;
     [SerializeField] private Camera main_camera;
-
     [SerializeField] private AudioSource audioSource;
-
-    private float positionX;
     private void Start()
     {
-        positionX = player.position.x;
         audioSource.Play();
-
     }
     private void Update()
     {

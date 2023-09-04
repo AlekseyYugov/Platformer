@@ -17,8 +17,6 @@ public class MixerController : MonoBehaviour
             gameObject.GetComponent<Slider>().value = PlayerPrefs.GetFloat(m_Key);
             m_TextPersent.text = (gameObject.GetComponent<Slider>().value * 100).ToString("F0") + "%";
         }
-
-
     }
     public void SetVolume()
     {
@@ -26,8 +24,5 @@ public class MixerController : MonoBehaviour
         m_TextPersent.text = (gameObject.GetComponent<Slider>().value * 100).ToString("F0") + "%";
         PlayerPrefs.SetFloat(m_Key, gameObject.GetComponent<Slider>().value);
         PlayerPrefs.Save();
-
     }
-
-
 }

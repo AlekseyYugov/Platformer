@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +13,6 @@ public class TriggerOpenGameObjects : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.GetComponent<Player>())
@@ -23,7 +21,6 @@ public class TriggerOpenGameObjects : MonoBehaviour
             {
                 m_Object[i].SetActive(true);
             }
-        }
-        
+        }        
     }
 }

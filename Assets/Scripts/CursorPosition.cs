@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CursorPosition : MonoBehaviour
 {
     [SerializeField] private Transform cursor;
     [SerializeField] private new Camera camera;
-
     public static GameObject triggerObject;
 
     private void Update()
@@ -21,9 +18,6 @@ public class CursorPosition : MonoBehaviour
 
         cursor.position = point;
         Cursor.visible = false;
-
-
-
     }
     private void OnTriggerStay2D(Collider2D collision)
     {

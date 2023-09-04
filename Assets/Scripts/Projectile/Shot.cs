@@ -1,10 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
-
-
-
 
 public class Shot : MonoBehaviour
 {
@@ -23,10 +17,6 @@ public class Shot : MonoBehaviour
         if (collision.gameObject.GetComponent<Player>() || collision.gameObject.GetComponent<CursorPosition>() 
             || collision.gameObject.GetComponentInParent<Player>() || collision.gameObject.GetComponent<TriggerOpenGameObjects>()) return;
         if (m_IsBomb == false) Delete(0);
-
-        //if (m_Character.name == collision.name || gameObject.name == collision.name) return;
-        //else Delete(0);
-
     }
     private void Start()
     {

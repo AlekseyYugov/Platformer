@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoSingleton<Player>
@@ -37,9 +34,6 @@ public class Player : MonoSingleton<Player>
             if (m_CurrentManaPoint > m_MaxManaPoint) m_CurrentManaPoint = m_MaxManaPoint;
         }
     }
-
-
-
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.GetComponent<ControllerEnemy>())

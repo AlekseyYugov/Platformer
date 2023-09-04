@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +5,7 @@ public class ProgressBarHealthPointEnemy : MonoBehaviour
 {
     [SerializeField] private Image progressbar;
     [SerializeField] private Image back;
-    [SerializeField] private ControllerEnemy enemy;// измен€ю Enemy на ControllerEnemy
+    [SerializeField] private ControllerEnemy enemy;
     
     private void Update()
     {

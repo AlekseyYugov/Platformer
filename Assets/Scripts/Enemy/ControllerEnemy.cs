@@ -41,13 +41,9 @@ public class ControllerEnemy : ViewEnemy
         CheckingGround();
         if (jump) 
         {
-            //gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10000f, ForceMode2D.Impulse);
             StartCoroutine(Jump());
-            jump= false;
-            
+            jump= false;            
         }
-        
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

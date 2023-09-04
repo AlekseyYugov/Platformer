@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterAnimation : PlayerController
@@ -36,8 +34,7 @@ public class CharacterAnimation : PlayerController
     }
 
     public void AnimAttack()
-    {//TODO
-        
+    {        
         if (Input.GetMouseButton(0))
         {
             anim.SetBool("Attack", true);

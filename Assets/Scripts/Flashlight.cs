@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
     [SerializeField] private GameObject m_Light;
     [SerializeField] private bool m_Activate;
+    private Shot shot;
 
     private void Start()
     {
@@ -20,8 +19,7 @@ public class Flashlight : MonoBehaviour
         }
         
     }
-
-    private Shot shot;
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<Shot>())

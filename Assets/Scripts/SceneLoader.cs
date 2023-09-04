@@ -1,4 +1,3 @@
-using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,18 +6,14 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private GameObject m_MainMenu;
     [SerializeField] private GameObject m_Setting;
     [SerializeField] private Scenes m_Scene;
-
-
     private void Start()
     {
         if(m_MainMenu!= null && m_Setting != null)
         {
             m_MainMenu.SetActive(true);
             m_Setting.SetActive(false);
-        }
-        
+        }        
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.GetComponent<Player>())
@@ -37,6 +32,7 @@ public class SceneLoader : MonoBehaviour
     }
     public void NewGame()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(1);
     }
     public void Setting()
@@ -45,9 +41,7 @@ public class SceneLoader : MonoBehaviour
         {
             m_Setting.SetActive(true);
             m_MainMenu.SetActive(false);
-        }
-            
-        
+        }       
     }
     public void Back()
     {
@@ -56,7 +50,6 @@ public class SceneLoader : MonoBehaviour
             m_MainMenu.SetActive(true);
             m_Setting.SetActive(false);
         }
-            
     }
     public void Quit()
     {

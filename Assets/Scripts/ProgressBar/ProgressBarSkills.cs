@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,10 +13,6 @@ public class ProgressBarSkills : MonoBehaviour
         turret = FindAnyObjectByType<Turret>();
         value = turret.m_Timer;
     }
-
-    
-    
-
     private void Update()
     {
         if (turret.projectile[turret.index] == projectile)
@@ -28,6 +22,4 @@ public class ProgressBarSkills : MonoBehaviour
         image.fillAmount = value / projectile.m_ShotPeriod;
         value += Time.deltaTime;
     }
-
-
 }
